@@ -1,5 +1,113 @@
+/* Main colors */
+:root {
+  --color-bg-dark: #1f1d1d;
+  --color-bg-graphite: #1a1a1a;
+  --color-accent-orange: #b66605;
+  --color-text-heading: #f5deb3;
+  --color-text-main: #ffffff;
+}
+
+/* Basic style (Mobile first) */
 body {
-  font-family: sans-serif;
+  font-family: "Arial", sans-serif;
   margin: 0;
-  padding: 0;
+  background-color: var(--color-bg-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text-heading);
+}
+
+a {
+  color: var(--color-accent-orange);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f3a10a; /* немного светлее на hover */
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--color-bg-graphite);
+}
+
+.navbar .nav-link {
+  color: var(--color-text-main);
+}
+
+.navbar .nav-link.active {
+  color: var(--color-accent-orange);
+}
+
+.navbar .navbar-brand {
+  color: var(--color-accent-orange);
+  font-weight: bold;
+}
+
+/* Gallery */
+.gallery {
+  margin: 2rem 0;
+}
+
+.carousel-item img {
+  border-radius: 8px;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* Bio */
+.bio {
+  background-color: var(--color-bg-graphite);
+  padding: 1.5rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.bio-text {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: var(--color-text-main);
+}
+
+/* Playlist */
+.playlist {
+  background-color: var(--color-bg-graphite);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-bg-graphite);
+  color: var(--color-text-heading);
+}
+
+/* ============================
+   Media Queries (Tablet и Desktop)
+============================ */
+
+@media (min-width: 768px) {
+  .carousel-item img {
+    max-height: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-item img {
+    max-height: 500px;
+  }
 }
