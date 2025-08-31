@@ -23,9 +23,9 @@
       <h1>Band Name</h1>
     </header>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#home">
           <img
             src="images/logo/MusicBand-logo.png"
             alt="Music Band Logo"
@@ -48,16 +48,16 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#">home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#">about</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Music</a>
+              <a class="nav-link" href="#">music</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#">contact</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -147,7 +147,7 @@
       </div>
     </section>
 
-    <section class="bio">
+    <section id="about" class="bio">
       <p class="bio-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
         scelerisque nibh eros, eget pulvinar lectus imperdiet eu. Phasellus ac
@@ -156,7 +156,7 @@
       </p>
     </section>
 
-    <section class="playlist">
+    <section id="music" class="playlist">
       <h2>Our Music</h2>
       <!-- Песня 1 -->
       <div class="track">
@@ -202,7 +202,7 @@
       <audio id="audioPlayer" preload="none"></audio>
     </section>
 
-    <footer class="bg-light py-3 mt-5">
+    <footer id="contact" class="bg-light py-3 mt-5">
       <div class="container text-center contact-us">
         <p>Contact us: email@example.com</p>
       </div>
@@ -216,6 +216,7 @@
         <a href="https://youtube.com" target="_blank"
           ><i class="fab fa-youtube"></i
         ></a>
+      </div>
       </div>
     </footer>
 
