@@ -1,7 +1,7 @@
 /* Main colors */
 :root {
   --color-bg-dark: #1f1d1d;
-  --color-bg-graphite: #1a1a1a;
+  --color-bg-graphite: #333;
   --color-accent-orange: #b66605;
   --color-text-heading: #f5deb3;
   --color-text-main: #ffffff;
@@ -90,10 +90,44 @@ header {
   margin-bottom: 2rem;
 }
 
+.playlist h2 {
+  color: var(--color-text-heading);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.track {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-bg-graphite);
+  padding-bottom: 0.5rem;
+}
+
+.credit {
+  font-size: 10px;
+  color: #cccccc;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 0.3rem;
+}
+
+.credit a {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+.credit a:hover {
+  color: var(--color-accent-orange);
+}
+
 /* Footer */
 footer {
   background-color: var(--color-bg-graphite);
-  color: var(--color-text-heading);
+}
+
+.contact-us p {
+  background-color: var(--color-bg-graphite);
+  color: var(--color-accent-orange);
 }
 
 /* ============================
