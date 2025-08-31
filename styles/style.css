@@ -8,10 +8,15 @@
 }
 
 /* Basic style (Mobile first) */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
   background-color: var(--color-bg-dark);
+  padding-top: 70px;
 }
 
 h1,
