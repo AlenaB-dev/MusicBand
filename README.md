@@ -7,7 +7,6 @@ A simple website for a music band, showcasing their profile, photos, and songs w
 - [About](#about)
 - [Features](#features)
 - [Project Structure](#project-structure)
-- [Usage](#usage)
 - [Future Improvements](#future-improvements)
 - [License](#license)
 
@@ -31,6 +30,7 @@ This is a web project for a music band. It includes:
 ```plaintext
 
 /MusicSite
+
 │── index.html      # main page of the site
 │── /styles         # styling
 │ └── style.css
@@ -43,7 +43,12 @@ This is a web project for a music band. It includes:
 
 ## Future Improvements
 
-Dynamic playlist generated via JSON
-Advanced audio player with progress bar and volume control
-Band biography and discography pages
-Integration with streaming platforms like SoundCloud or Bandcamp
+- Dynamic playlist generated via JSON
+- Advanced audio player with progress bar and volume control
+- Band biography and discography pages
+- Integration with streaming platforms like SoundCloud or Bandcamp
+
+## License
+
+This project is licensed under the MIT License.  
+See the [LICENSE](LICENSE) file for details.
