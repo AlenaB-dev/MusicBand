@@ -63,12 +63,23 @@ a:hover {
   font-weight: bold;
 }
 
+.top-section {
+  position: relative;
+}
+
+.top-bg {
+  height: 200px;
+  background-color: var(--color-accent-orange);
+}
+
 /* Gallery */
 .carousel-wrapper {
-  background-color: transparent;
-  margin-top: -50px;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
   z-index: 1;
-  position: relative;
+  padding: 0px 20px;
 }
 
 .gallery {
@@ -79,7 +90,7 @@ a:hover {
   height: 300px;
 }
 
-.carousel-inner img {
+.carousel-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -89,9 +100,7 @@ a:hover {
 /* Bio */
 .bio {
   background-color: var(--color-bg-graphite);
-  padding: 1.5rem 1rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
+  padding: 8rem 1rem 2rem 1rem;
 }
 
 .bio-text {
@@ -139,24 +148,67 @@ a:hover {
   color: var(--color-accent-orange);
 }
 
+.our-roles {
+  background: linear-gradient(
+    135deg,
+    rgba(51, 51, 51, 0.9) 0%,
+    rgba(31, 29, 29, 0.9) 100%
+  );
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 600px;
+  color: var(--color-text-main);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 166, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.our-roles p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.our-roles .band-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--color-accent-orange);
+  margin-bottom: 1rem;
+}
+
+.our-roles .musician {
+  font-size: 1.1rem;
+}
+
+.our-roles .place-of-record {
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  margin-top: 1rem;
+  border-top: 1px solid rgba(255, 166, 0, 0.3); /* разделитель */
+  padding-top: 0.8rem;
+}
+
 /* Footer */
-footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+footer#contact {
   background-color: var(--color-bg-graphite);
   color: var(--color-accent-orange);
+  padding: 2rem 1rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 166, 0, 0.3);
 }
 
-.footer p {
-  margin: 0;
+footer#contact p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
 }
 
-.socialmedia-icons a {
-  margin-left: 10px;
-  color: inherit;
-  font-size: 1.2rem;
-  text-decoration: none;
+footer#contact .contact-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
 }
 
 /* ============================
@@ -166,6 +218,12 @@ footer .container {
 @media (min-width: 768px) {
   .carousel-inner {
     height: 500px;
+  }
+
+  footer#contact .contact-us {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
   }
 }
 
