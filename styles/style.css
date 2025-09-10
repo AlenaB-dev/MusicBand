@@ -131,12 +131,23 @@ header {
 }
 
 /* Footer */
-footer {
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--color-bg-graphite);
+  color: var(--color-accent-orange);
 }
 
-.contact-us p {
-  color: var(--color-accent-orange);
+.footer p {
+  margin: 0;
+}
+
+.socialmedia-icons a {
+  margin-left: 10px;
+  color: inherit;
+  font-size: 1.2rem;
+  text-decoration: none;
 }
 
 /* ============================
