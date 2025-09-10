@@ -67,7 +67,7 @@ header {
 }
 
 .carousel-inner {
-  height: 250px;
+  height: 300px;
 }
 
 .carousel-inner img {
@@ -145,13 +145,14 @@ footer {
 
 @media (min-width: 768px) {
   .carousel-inner {
-    height: 400px;
+    height: 500px;
   }
 }
 
 @media (min-width: 1024px) {
   .carousel-inner {
-    height: 600px;
+    height: 80vh;
+    max-height: 600px;
   }
 
   .credit {
