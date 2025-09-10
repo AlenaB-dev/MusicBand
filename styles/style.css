@@ -38,9 +38,11 @@ a:hover {
 }
 
 /* Header */
-header {
+.header {
+  background-color: var(--color-accent-orange);
+  padding: 2rem 1rem;
   text-align: center;
-  padding: 1.5rem 1rem;
+  color: #fff;
 }
 
 /* Navbar */
@@ -62,6 +64,13 @@ header {
 }
 
 /* Gallery */
+.carousel-wrapper {
+  background-color: transparent;
+  margin-top: -50px;
+  z-index: 1;
+  position: relative;
+}
+
 .gallery {
   margin: 2rem 0;
 }
