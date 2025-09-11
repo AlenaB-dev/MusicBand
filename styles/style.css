@@ -1,10 +1,12 @@
 /* Main colors */
 :root {
-  --color-bg-dark: #1f1d1d;
-  --color-bg-graphite: #333;
-  --color-accent-orange: #b66605;
-  --color-text-heading: #f5deb3;
-  --color-text-main: #ffffff;
+  --color-bg-dark: #16160e;
+  --color-bg-graphite: #252119;
+  --color-accent-orange: #9d4517;
+  --color-text-heading: #f4dab4;
+  --color-text-main: #faf2de;
+  --color-accent-orange-hover: #f3a10a;
+  --color-accent-orange-bg: rgba(182, 102, 5, 0.1);
 }
 
 /* Basic style (Mobile first) */
@@ -34,7 +36,7 @@ a {
 }
 
 a:hover {
-  color: #f3a10a; /* немного светлее на hover */
+  color: var(--color-accent-orange-hover);
 }
 
 /* Header */
@@ -42,7 +44,7 @@ a:hover {
   background-color: var(--color-accent-orange);
   padding: 2rem 1rem;
   text-align: center;
-  color: #fff;
+  color: var(--color-text-heading);
 }
 
 /* Navbar */
@@ -54,7 +56,7 @@ a:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   opacity: 0.95;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .navbar-brand img:hover {
@@ -84,15 +86,15 @@ a:hover {
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
   color: var(--color-accent-orange);
-  background-color: rgba(182, 102, 5, 0.1);
-  border-radius: 5px;
+  background-color: var(--color-accent-orange-bg);
+  border-radius: 12px;
 }
 
 .navbar .nav-link.active {
   color: var(--color-accent-orange);
   font-weight: bold;
-  background-color: rgba(182, 102, 5, 0.2);
-  border-radius: 5px;
+  background-color: var(--color-accent-orange-bg);
+  border-radius: 12px;
 }
 
 .navbar-toggler {
@@ -159,7 +161,7 @@ a:hover {
 .playlist {
   background-color: var(--color-bg-graphite);
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 12px;
   text-align: center;
   margin: 2rem auto;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
@@ -232,7 +234,7 @@ a:hover {
   font-size: 0.95rem;
   color: var(--color-text-main);
   margin-top: 1rem;
-  border-top: 1px solid rgba(255, 166, 0, 0.3); /* разделитель */
+  border-top: 1px solid rgba(255, 166, 0, 0.3);
   padding-top: 0.8rem;
 }
 
@@ -263,6 +265,12 @@ footer#contact .contact-us {
 ============================ */
 
 @media (min-width: 768px) {
+  .navbar-nav {
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: flex-end;
+  }
+
   .carousel-wrapper {
     top: -60px;
   }
@@ -285,7 +293,6 @@ footer#contact .contact-us {
 @media (min-width: 1024px) {
   .carousel-wrapper {
     top: -60px;
-    max-width: 900px;
   }
 
   .carousel-inner {
