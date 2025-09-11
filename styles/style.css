@@ -97,6 +97,13 @@ a:hover {
   border-radius: 12px;
 }
 
+.navbar-nav .nav-link {
+  opacity: 0;
+}
+.navbar-collapse.show .nav-link {
+  opacity: 1;
+}
+
 .navbar-toggler {
   border-color: var(--color-text-main);
 }
