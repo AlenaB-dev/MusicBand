@@ -52,15 +52,30 @@ a:hover {
 
 .navbar .nav-link {
   color: var(--color-text-main);
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--color-accent-orange);
 }
 
 .navbar .nav-link.active {
   color: var(--color-accent-orange);
+  font-weight: bold;
 }
 
 .navbar .navbar-brand {
   color: var(--color-accent-orange);
   font-weight: bold;
+}
+
+.navbar-toggler {
+  border-color: var(--color-text-main);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
 }
 
 .top-section {
@@ -87,7 +102,7 @@ a:hover {
 }
 
 .carousel-inner {
-  height: 300px;
+  height: clamp(300px, 50vw, 450px);
 }
 
 .carousel-item img {
@@ -97,16 +112,22 @@ a:hover {
   object-position: center;
 }
 
+.bottom-bg {
+  height: 100px;
+}
+
 /* Bio */
 .bio {
   background-color: var(--color-bg-graphite);
-  padding: 8rem 1rem 2rem 1rem;
+  padding: 1rem;
 }
 
 .bio-text {
+  text-indent: 2em;
   line-height: 1.6;
   font-size: 1rem;
   color: var(--color-text-main);
+  text-align: justify;
 }
 
 /* Playlist */
@@ -115,7 +136,9 @@ a:hover {
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 2rem auto;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 166, 0, 0.3);
 }
 
 .playlist h2 {
@@ -162,7 +185,6 @@ a:hover {
   color: var(--color-text-main);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 166, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .our-roles p {
@@ -216,8 +238,16 @@ footer#contact .contact-us {
 ============================ */
 
 @media (min-width: 768px) {
+  .carousel-wrapper {
+    top: -60px;
+  }
+
   .carousel-inner {
     height: 500px;
+  }
+
+  .bottom-bg {
+    height: 300px;
   }
 
   footer#contact .contact-us {
@@ -228,9 +258,18 @@ footer#contact .contact-us {
 }
 
 @media (min-width: 1024px) {
+  .carousel-wrapper {
+    top: -60px;
+    max-width: 900px;
+  }
+
   .carousel-inner {
     height: 80vh;
     max-height: 600px;
+  }
+
+  .bottom-bg {
+    height: 300px;
   }
 
   .credit {
