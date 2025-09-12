@@ -192,17 +192,24 @@ a:hover {
   background: var(--color-accent-orange);
   border: none;
   color: var(--color-text-main);
-  font-size: 18px;
   width: 40px;
   height: 40px;
-  line-height: 40px;
-  text-align: center;
   border-radius: 50%;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 
 .player button:hover {
   background: var(--color-accent-orange-hover);
+}
+
+.player button svg {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
 }
 
 #progress {
@@ -213,6 +220,45 @@ a:hover {
 #time {
   font-size: 14px;
   font-family: monospace;
+}
+
+.volume-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px;
+  position: relative;
+}
+
+#volumeControl {
+  width: 8px;
+  height: 80px;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  writing-mode: bt-lr;
+  background: #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: 10px;
+}
+
+#volumeControl::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--color-accent-orange);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#volumeControl::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: var(--color-accent-orange);
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 /* Our roles */
