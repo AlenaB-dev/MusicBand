@@ -17,21 +17,33 @@ navbarToggler.addEventListener("click", () => {
 
 const audio = document.getElementById("audio");
 const playPauseBtn = document.getElementById("play-pause");
+const playIcon = document.getElementById("playIcon");
+const pauseIcon = document.getElementById("pauseIcon");
+
 const progress = document.getElementById("progress");
 const timeDisplay = document.getElementById("time");
 
+const volumeControl = document.getElementById("volumeControl");
+const muteBtn = document.getElementById("mute-btn");
+const volumeOn = document.getElementById("volumeOn");
+const volumeOff = document.getElementById("volumeOff");
+
+// Play/Pause
 playPauseBtn.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
-    playPauseBtn.textContent = "⏸";
+    playIcon.style.display = "none";
+    pauseIcon.style.display = "block";
   } else {
     audio.pause();
-    playPauseBtn.textContent = "▶";
+    playIcon.style.display = "block";
+    pauseIcon.style.display = "none";
   }
 });
 
+// Progress renew
 audio.addEventListener("timeupdate", () => {
-  progress.value = (audio.currentTime / audio.duration) * 100;
+  progress.value = (audio.currentTime / audio.duration) * 100 || 0;
   timeDisplay.textContent = formatTime(audio.currentTime);
 });
 
@@ -44,3 +56,17 @@ function formatTime(seconds) {
   const sec = Math.floor(seconds % 60);
   return `${min}:${sec < 10 ? "0" + sec : sec}`;
 }
+
+// Volume
+muteBtn.addEventListener("click", () => {
+  audio.mute = !audio.muted;
+  if (audio.muted) {
+    volumeOn.style.display = "none";
+    volumeOff.style.display = "block";
+    volumeControl.value = 0;
+  } else {
+    volumeOn.style.display = "block";
+    volumeOff.style.display = "none";
+    volumeControl.value = audio.volume;
+  }
+});
