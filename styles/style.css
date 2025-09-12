@@ -181,7 +181,7 @@ a:hover {
   gap: 10px;
   background: var(--color-text-main);
   color: var(--color-accent-orange);
-  padding: 10px 15px;
+  padding: 30px 35px;
   border-radius: 12px;
   box-shadow: 0 4px 10px var(--color-bg-dark);
   max-width: 600px;
@@ -224,20 +224,32 @@ a:hover {
 
 .volume-wrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 5px;
+  position: relative;
+}
+
+#mute-btn {
+  z-index: 2;
 }
 
 #volumeControl {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
   width: 8px;
   height: 80px;
-  writing-mode: bt-lr;
   border-radius: 5px;
   cursor: pointer;
-  -webkit-appearance: slider-vertical;
-  appearance: slider-vertical;
+  -webkit-appearance: none;
+  appearance: none;
   background: var(--color-accent-orange);
+  margin-left: 10px;
+  display: none;
+}
+
+.volume-wrapper:hover #volumeControl {
+  display: block;
 }
 
 #volumeControl::-webkit-slider-thumb {
