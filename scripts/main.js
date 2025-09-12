@@ -17,7 +17,7 @@ navbarToggler.addEventListener("click", () => {
 
 const audio = document.getElementById("audio");
 const playPauseBtn = document.getElementById("play-pause");
-const progress = document.getElementById("progess");
+const progress = document.getElementById("progress");
 const timeDisplay = document.getElementById("time");
 
 playPauseBtn.addEventListener("click", () => {
@@ -25,7 +25,7 @@ playPauseBtn.addEventListener("click", () => {
     audio.play();
     playPauseBtn.textContent = "⏸";
   } else {
-    audio.paused();
+    audio.pause();
     playPauseBtn.textContent = "▶";
   }
 });
