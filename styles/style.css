@@ -181,7 +181,7 @@ a:hover {
   gap: 10px;
   background: var(--color-text-main);
   color: var(--color-accent-orange);
-  padding: 30px 35px;
+  padding: 30px 10px;
   border-radius: 12px;
   box-shadow: 0 4px 10px var(--color-bg-dark);
   max-width: 600px;
