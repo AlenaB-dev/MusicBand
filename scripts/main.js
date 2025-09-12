@@ -23,6 +23,7 @@ const pauseIcon = document.getElementById("pauseIcon");
 const progress = document.getElementById("progress");
 const timeDisplay = document.getElementById("time");
 
+const volumeWrapper = document.querySelector(".volume-wrapper");
 const volumeControl = document.getElementById("volumeControl");
 const muteBtn = document.getElementById("mute-btn");
 const volumeOn = document.getElementById("volumeOn");
@@ -58,27 +59,35 @@ function formatTime(seconds) {
 }
 
 // Volume
+let volumeVisible = false;
+
+const showVolume = () => {
+  volumeVisible = true;
+  volumeControl.style.display = "block";
+};
+
+const hideVolume = () => {
+  volumeVisible = false;
+  volumeControl.style.display = "none";
+};
+
+// Клик по кнопке — переключаем mute и показываем ползунок
 muteBtn.addEventListener("click", () => {
   audio.muted = !audio.muted;
-  if (audio.muted) {
-    volumeOn.style.display = "none";
-    volumeOff.style.display = "block";
-    volumeControl.value = 0;
-  } else {
-    volumeOn.style.display = "block";
-    volumeOff.style.display = "none";
-    volumeControl.value = audio.volume;
-  }
+  volumeOn.style.display = audio.muted ? "none" : "block";
+  volumeOff.style.display = audio.muted ? "block" : "none";
+
+  showVolume();
 });
 
+// Ползунок остаётся видимым при наведении на кнопку или сам ползунок
+volumeWrapper.addEventListener("mouseenter", showVolume);
+volumeWrapper.addEventListener("mouseleave", hideVolume);
+
+// Управление громкостью
 volumeControl.addEventListener("input", () => {
   audio.volume = volumeControl.value;
   audio.muted = volumeControl.value == 0;
-  if (audio.muted) {
-    volumeOn.style.display = "none";
-    volumeOff.style.display = "block";
-  } else {
-    volumeOn.style.display = "block";
-    volumeOff.style.display = "none";
-  }
+  volumeOn.style.display = audio.muted ? "none" : "block";
+  volumeOff.style.display = audio.muted ? "block" : "none";
 });
