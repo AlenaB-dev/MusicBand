@@ -303,23 +303,26 @@
         <span id="time">0:00</span>
 
         <!-- Volume -->
-        <button id="mute-btn" class="btn">
-          <svg id="volumeOn" viewBox="0 0 24 24">
-            <path d="M3 9v6h4l5 5V4L7 9H3z" />
-          </svg>
-          <svg id="volumeOff" viewBox="0 0 24 24" style="display: none">
-            <path d="M16.5 12l5 5m0-10l-5 5m-2.5 7V5l-5 5H3v4h4l5 5z" />
-          </svg>
-        </button>
-        <input
-          type="range"
-          id="volumeControl"
-          min="0"
-          max="1"
-          step="0.01"
-          value="0.7"
-        />
+        <div class="volume-wrapper">
+          <button id="mute-btn" class="btn">
+            <svg id="volumeOn" viewBox="0 0 24 24">
+              <path d="M3 9v6h4l5 5V4L7 9H3z" />
+            </svg>
+            <svg id="volumeOff" viewBox="0 0 24 24" style="display: none">
+              <path d="M16.5 12l5 5m0-10l-5 5m-2.5 7V5l-5 5H3v4h4l5 5z" />
+            </svg>
+          </button>
+          <input
+            type="range"
+            id="volumeControl"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.7"
+          />
+        </div>
       </div>
+
       <audio id="audio" src="audio/shorterDays.mp3" type="audio/mpeg"></audio>
     </section>
 
