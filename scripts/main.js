@@ -59,7 +59,7 @@ function formatTime(seconds) {
 
 // Volume
 muteBtn.addEventListener("click", () => {
-  audio.mute = !audio.muted;
+  audio.muted = !audio.muted;
   if (audio.muted) {
     volumeOn.style.display = "none";
     volumeOff.style.display = "block";
@@ -68,5 +68,17 @@ muteBtn.addEventListener("click", () => {
     volumeOn.style.display = "block";
     volumeOff.style.display = "none";
     volumeControl.value = audio.volume;
+  }
+});
+
+volumeControl.addEventListener("input", () => {
+  audio.volume = volumeControl.value;
+  audio.muted = volumeControl.value == 0;
+  if (audio.muted) {
+    volumeOn.style.display = "none";
+    volumeOff.style.display = "block";
+  } else {
+    volumeOn.style.display = "block";
+    volumeOff.style.display = "none";
   }
 });
