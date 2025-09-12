@@ -225,18 +225,36 @@ a:hover {
 .volume-wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 40px;
   gap: 5px;
   position: relative;
 }
 
 #mute-btn {
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#volumeOn,
+#volumeOff {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}
+
+#volumeOff path:last-child {
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
 }
 
 #volumeControl {
   position: absolute;
-  bottom: 50px;
-  left: 50%;
+  bottom: -20px;
+  left: 40px;
   width: 8px;
   height: 80px;
   border-radius: 5px;
