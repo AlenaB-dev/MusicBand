@@ -165,46 +165,44 @@ a:hover {
 }
 
 /* Playlist */
-.playlist {
-  background-color: var(--color-bg-graphite);
-  padding: 1rem;
-  border-radius: 12px;
-  text-align: center;
-  margin: 2rem auto;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 166, 0, 0.3);
-}
-
-.playlist h2 {
-  color: var(--color-text-heading);
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.track {
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid var(--color-bg-graphite);
-  padding-bottom: 0.5rem;
-}
-
-.credit {
-  font-size: 10px;
-  color: #cccccc;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  margin-top: 0.3rem;
-}
-
-.credit a {
-  color: #cccccc;
-  text-decoration: none;
-}
-
-.credit a:hover {
+.player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-text-main);
   color: var(--color-accent-orange);
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px var(--color-bg-dark);
+  max-width: 400px;
 }
 
+.player button {
+  background: var(--color-accent-orange);
+  border: none;
+  color: var(--color-text-main);
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.player button:hover {
+  background: var(--color-accent-orange-hover);
+}
+
+#progress {
+  flex: 1;
+  accent-color: var(--color-accent-orange);
+}
+
+#time {
+  font-size: 14px;
+  font-family: monospace;
+}
+
+/* Our roles */
 .our-roles {
   background: linear-gradient(
     135deg,
